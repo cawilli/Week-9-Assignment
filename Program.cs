@@ -6,8 +6,13 @@ namespace Hangman_Game
     {
         static void Main(string[] args)
         {
+            var hangMan = new HangMan();
             var options = new WordBank();
+            string word = options.GetWord();
+
             Message.WelcomeMessage();
+            char guess = char.Parse(Console.ReadLine());
+            Console.WriteLine();
         }
     }
 }
