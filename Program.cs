@@ -6,6 +6,7 @@ namespace Hangman_Game
     {
         static void Main(string[] args)
         {
+            var options = new WordBank();
             Message.WelcomeMessage();
         }
     }

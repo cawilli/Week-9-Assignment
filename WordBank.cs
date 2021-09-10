@@ -18,7 +18,8 @@ namespace Hangman_Game
         {
             Random random = new Random();
             int randomIndex = random.Next(0, WordCount);
-            return Words[randomIndex];
+            return Words[randomIndex];            
         }
+        
     }
 }
