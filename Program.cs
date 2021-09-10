@@ -12,7 +12,7 @@ namespace Hangman_Game
 
             Message.WelcomeMessage();
             char guess = char.Parse(Console.ReadLine());
-            Console.WriteLine();
+            Console.WriteLine("Hint: the word has 11 letters.");
         }
     }
 }

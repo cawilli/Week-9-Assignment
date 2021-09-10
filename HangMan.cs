@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Hangman_Game
 {
-    class HangMan
+    public class HangMan
     {
+        public string PayingWord { get; set; }
+        public char Guess { get; set; }
+        public string Misses { get; set; }
+        public int Attempts { get; set; }
     }
 }
