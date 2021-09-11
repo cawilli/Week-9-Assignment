@@ -12,7 +12,7 @@ namespace Hangman_Game
             Console.WriteLine("A word will be selected from a list. As the player, you will guess a letter one at a time to get a full word.");
             Console.WriteLine("If you miss six times, you lose. Otherwise you can keep guessing until you win.");
             Console.WriteLine("You will receive hints along the way.");
-            Console.WriteLine("Hint: the word has 11 letter.");
+            Console.WriteLine("Hint: the word has 11 letters.");
         }
     }
 }
