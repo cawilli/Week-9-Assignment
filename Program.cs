@@ -6,8 +6,9 @@ namespace Hangman_Game
     {        
         static void Main(string[] args)
         {
-            Message.WelcomeMessage();         
-            
+            Message.WelcomeMessage();
+            HangMan play = new HangMan();
+            play.Game();
         }
     }
 }
