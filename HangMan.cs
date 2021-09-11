@@ -10,6 +10,7 @@ namespace Hangman_Game
         //player will only get 6 attempts to play game
         public bool[] letterSelected;
         public string PlayingWord;
+        char letter;
         public char Guess { get; set; }
         public string Misses { get; set; }
         public int Attempts = 6;
@@ -20,6 +21,7 @@ namespace Hangman_Game
             PlayingWord = RandomWord.GetWord();
             letterSelected = new bool[RandomWord.WordCount];
         }
+        //track completion of the word 
         public void ShowLetter()
         {
             for(int i = 0; i <PlayingWord.Length; i++)
@@ -31,6 +33,16 @@ namespace Hangman_Game
                 else
                 {
                     Console.WriteLine("_");
+                }
+            }
+        }
+        public string CorrectLetter()
+        {
+         for(int i = 0; i < PlayingWord.Length; i++)
+            {
+                if (i == letter)
+                {
+                    letterSelected[i] = true;
                 }
             }
         }
