@@ -22,6 +22,30 @@ namespace Hangman_Game
             PlayingWord = RandomWord.GetWord();
             letterSelected = new bool[RandomWord.WordCount];
         }
+              
+        public void StartGame()
+        {    
+            //needed to get the word from the word bank in order to play
+            //need to get what the player inputs for their guess
+            //while loop is running if the game hasn't ended 
+            //see if the letter is in the string             
+            WordBank wb = new WordBank();
+            PlayingWord = wb.GetWord();
+            string typed = Console.ReadLine();            
+            while (!EndGame())
+            {
+                if (PlayingWord.Contains(Guess))
+                {
+                    CorrectLetter(Guess);
+                }
+                else
+                {
+                    Attempts--;
+                }
+
+                ShowLetter();
+            }
+        }
         //track completion of the word 
         public void ShowLetter()
         {
@@ -37,7 +61,7 @@ namespace Hangman_Game
                 }
             }
         }
-
+        //one error - need assistance from instructor to fix
         // this will update which letters were found in the random word from the word bank created.
         public string CorrectLetter(char letter)
         {

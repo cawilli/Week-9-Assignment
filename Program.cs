@@ -8,7 +8,7 @@ namespace Hangman_Game
         {
             Message.WelcomeMessage();
             HangMan play = new HangMan();
-            play.Game();
+            play.StartGame();
         }
     }
 }
